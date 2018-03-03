@@ -22,7 +22,7 @@ public class ConnectionSql {
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/banco";
     private static final String USER = "root";
-    private static final String PASS = "123";
+    private static final String PASS = "1234";
     
     
     public static Connection getConnection() {
