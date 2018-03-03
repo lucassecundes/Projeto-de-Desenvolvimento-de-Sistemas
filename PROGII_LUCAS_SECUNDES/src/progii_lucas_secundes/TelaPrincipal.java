@@ -30,6 +30,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jLabel1 = new javax.swing.JLabel();
+        jtLogin = new javax.swing.JTextField();
+        jlSenha = new javax.swing.JLabel();
+        jtSenha = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmCadastro = new javax.swing.JMenu();
         jmeEndereco = new javax.swing.JMenuItem();
@@ -39,6 +43,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("LOGIN");
+
+        jtLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtLoginActionPerformed(evt);
+            }
+        });
+
+        jlSenha.setText("SENHA");
 
         jmCadastro.setText("Cadastrar");
 
@@ -74,11 +88,31 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jtLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                    .addComponent(jtSenha))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(173, 173, 173)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jlSenha))
+                .addContainerGap(187, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 174, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jlSenha)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,6 +138,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         cadastrarPerfil.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         cadastrarPerfil.setVisible(true); // display frame
     }//GEN-LAST:event_jmePerfilActionPerformed
+
+    private void jtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,11 +179,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JLabel jlSenha;
     private javax.swing.JMenu jmCadastro;
     private javax.swing.JMenuItem jmeEndereco;
     private javax.swing.JMenuItem jmePerfil;
     private javax.swing.JMenuItem jmeUsuario;
+    private javax.swing.JTextField jtLogin;
+    private javax.swing.JTextField jtSenha;
     // End of variables declaration//GEN-END:variables
 }
